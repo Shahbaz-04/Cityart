@@ -1,0 +1,107 @@
+/* --- (मौजूदा कोड) आपका पुराना कोड जैसा है वैसा ही रहने दें --- */
+
+.page-container {
+  padding: 40px;
+  text-align: center;
+}
+/* ... (आपका बाकी पुराना कोड) ... */
+.product-info p {
+  color: #007b5e;
+  font-weight: bold;
+}
+
+/* --- (नया कोड) यह नया कोड यहाँ से नीचे पेस्ट करें --- */
+
+/* 1. लिंक से अंडरलाइन हटाने के लिए */
+.product-card-link {
+  text-decoration: none; /* अंडरलाइन हटाता है */
+  color: inherit; /* टेक्स्ट का रंग पेरेंट जैसा रखता है */
+}
+
+/* 2. कार्ड डिटेल पेज की स्टाइलिंग */
+.back-link {
+  display: block;
+  text-align: left;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  color: #007b5e;
+  text-decoration: none;
+  font-weight: bold;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.card-details-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* दो कॉलम लेआउट */
+  gap: 40px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.details-img-container {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.details-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* इमेज को स्क्वायर रखता है */
+  object-fit: cover;
+}
+
+.details-info h1 {
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.details-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #007b5e;
+  margin-bottom: 20px;
+}
+
+.details-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.add-to-cart-btn {
+  background-color: #007b5e;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #005a46;
+}
+
+/* 3. मोबाइल के लिए (RWD) */
+@media (max-width: 768px) {
+  .card-details-container {
+    grid-template-columns: 1fr; /* मोबाइल पर एक कॉलम */
+  }
+  
+  .details-info h1 {
+    font-size: 1.8rem;
+  }
+  
+  .details-price {
+    font-size: 1.5rem;
+  }
+}
